@@ -1124,9 +1124,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Barbatos",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "10a830736e6c57f4027ec79bd76c85dc28b372ca",
+      "commit": "086857ad5479adba87007a6d051105cd33c255a0",
       "branch": "main",
-      "hash": "sha256-y9f34sdZevWon2KHuvswl8aGJ2CPUbHkCskWuQN83bE=",
+      "hash": "sha256-yl3/ZAU8uJQikR2Em4vTY70qzuEINsxdNjBhgLXftLU=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1147,6 +1147,22 @@
       "commit": "3c56407d9baa2af547ea8869c5395889926b5ee0",
       "branch": "main",
       "hash": "sha256-TK2G/GJoVbRQsffi3UZkZpi9N78uMr4ujXmgyD34USQ=",
+      "enabledByDefault": false,
+      "required": false
+    },
+    "ipsuShade by ipsusu": {
+      "name": "ipsuShade by ipsusu",
+      "description": "ipsusu ReShade / GShade, Gameplay and Screenshot presets for Final Fantasy XIV.",
+      "url": "https://github.com/ipsusu/ipsuShade",
+      "owner": "ipsusu",
+      "repo": "ipsuShade",
+      "deniedEffects": [],
+      "effects": [],
+      "installPath": "./reshade-shaders/Shaders",
+      "texturePath": "./reshade-shaders/Textures",
+      "commit": "0c9933abf33984fcc7dee573388d0b5465d94d63",
+      "branch": "master",
+      "hash": "sha256-UOIKgv/BxqB1tPzGuHUv8q5dtprHP854Ffu51hmSbHA=",
       "enabledByDefault": false,
       "required": false
     }

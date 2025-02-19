@@ -14,6 +14,7 @@ from urllib.request import Request, urlopen
 SHADER_LIST_URL = "https://raw.githubusercontent.com/crosire/reshade-shaders/refs/heads/list/EffectPackages.ini"
 
 VERSION_REGEX = re.compile(r"^v(\d+\.)?(\d+\.)?(\*|\d+)$")
+EXTRA_SOURCES = os.environ.get("EXTRA_SOURCES", "extraSources.ini")
 
 
 def nix_prefetch_git(url: str, branch: str) -> tuple[str, str]:
@@ -160,10 +161,14 @@ def shader_manifest():
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         },
     )
+    config = configparser.ConfigParser()
     with urlopen(req) as resp:
         body: str = resp.read().decode()
-        config = configparser.ConfigParser()
         config.read_string(body)
+    if os.path.exists(EXTRA_SOURCES):  # If extra sources are defined we can add them
+        with open(EXTRA_SOURCES, mode="r") as f:
+            config.read_file(f)
+
     manifest = {}
     for k in config:
         if not k.isnumeric():

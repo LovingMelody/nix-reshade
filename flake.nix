@@ -10,12 +10,15 @@
     inherit (nixpkgs) lib;
   in {
     packages = forAllSystems (
-      system: pkgs: {
+      system: pkgs: let
+        inherit (import ./lib/util.nix {inherit lib pkgs;}) mkShader;
+      in {
         reshade = pkgs.callPackage ./packages/reshade {};
-        reshade-full = pkgs.callPackage ./packages/reshade {withAddons = true;};
-        reshade-shaders = pkgs.callPackage ./packages/reshade-shaders {};
-        reshade-shaders-full = pkgs.callPackage ./packages/reshade-shaders {full = true;};
+        reshade-full = self.packages.${system}.reshade.override {withAddons = true;};
+        reshade-shaders = pkgs.callPackage ./packages/reshade-shaders {inherit mkShader;};
+        reshade-shaders-full = self.packages.${system}.reshade-shaders.override {full = true;};
         d3dcompiler_47-dll = pkgs.callPackage ./packages/d3dcompiler_47.dll {};
+        ipsuShaders = pkgs.callPackage ./packages/ipsuShaders {inherit mkShader;};
         test = self.packages.${system}.reshade-shaders.override {
           includeRequired = false;
           includeEnabled = false;
@@ -26,6 +29,7 @@
           paths = with self.packages.${system}; [
             reshade-full
             reshade-shaders-full
+            ipsuShaders
             d3dcompiler_47-dll
           ];
         };
@@ -108,8 +112,10 @@
       default = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "update-script" ''
+          PATH=${lib.makeBinPath [pkgs.nix-prefetch-git pkgs.nix-prefetch]}:$PATH
           git_root=$(${lib.getExe pkgs.git} rev-parse --show-toplevel)
           MANIFEST_PATH="$git_root/sources.json"
+          EXTRA_SOURCES=${./extraSources.ini}
           ${lib.getExe pkgs.python3} ${./sources-generator.py}
           ${lib.getExe self.formatter.${system}}
         '');
