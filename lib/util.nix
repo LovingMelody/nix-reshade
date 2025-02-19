@@ -22,8 +22,8 @@ in {
       installPhase = let
         shaders = builtins.filter (f: ! (builtins.elem f deniedEffects)) effects;
         # Install the shader file ensure the path is lowercase to catch conflicts
-        shaderInstall = shader: ''
-          find "$shaders_path" -type f -iname '${shader}' -printf "%P\n" \
+        shaderInstall = _shader: ''
+          find "$shaders_path" -type f \( -iname '*.fx' -o -iname '*.fxh' \) -printf "%P\n" \
             | while IFS= read -r file; do
                 install -Dm644 -v "$shaders_path/$file" "$out/${toLower shaderPath}/$(echo "$file" | tr '[:upper:]' '[:lower:]')"
               done
