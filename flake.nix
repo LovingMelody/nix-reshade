@@ -15,21 +15,20 @@
         reshade-full = pkgs.callPackage ./packages/reshade {withAddons = true;};
         reshade-shaders = pkgs.callPackage ./packages/reshade-shaders {};
         reshade-shaders-full = pkgs.callPackage ./packages/reshade-shaders {full = true;};
-        complete = pkgs.symlinkJoin {
-          name = "reshade-with-shaders";
-          paths = with self.packages.${system}; [reshade-full reshade-shaders-full];
-        };
+        d3dcompiler_47-dll = pkgs.callPackage ./packages/d3dcompiler_47.dll {};
         test = self.packages.${system}.reshade-shaders.override {
           includeRequired = false;
           includeEnabled = false;
           includeByName = ["SHADERDECK by TreyM"];
         };
-        update-script = pkgs.writeShellScriptBin "update-script" ''
-          git_root=$(${lib.getExe pkgs.git} rev-parse --show-toplevel)
-          MANIFEST_PATH="$git_root/sources.json"
-          ${lib.getExe pkgs.python3} ${./sources-generator.py}
-          ${lib.getExe self.formatter.${system}}
-        '';
+        complete = pkgs.symlinkJoin {
+          name = "reshade-with-shaders";
+          paths = with self.packages.${system}; [
+            reshade-full
+            reshade-shaders-full
+            d3dcompiler_47-dll
+          ];
+        };
       }
     );
     formatter = let
@@ -105,10 +104,15 @@
              --tree-root-file=flake.nix \
              "$@"
         '');
-    apps = forAllSystems (system: _pkgs: {
+    apps = forAllSystems (system: pkgs: {
       default = {
         type = "app";
-        program = lib.getExe self.packages.${system}.update-script;
+        program = lib.getExe (pkgs.writeShellScriptBin "update-script" ''
+          git_root=$(${lib.getExe pkgs.git} rev-parse --show-toplevel)
+          MANIFEST_PATH="$git_root/sources.json"
+          ${lib.getExe pkgs.python3} ${./sources-generator.py}
+          ${lib.getExe self.formatter.${system}}
+        '');
       };
     });
   };
