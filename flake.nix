@@ -11,12 +11,19 @@
   in {
     packages = forAllSystems (
       system: pkgs: let
-        inherit (import ./lib/util.nix {inherit lib pkgs;}) mkShader;
+        mkShader = pkgs.callPackage ./packages/build-support/mkShader {};
+        mkShaderFromSource = pkgs.callPackage ./packages/build-support/mkShaderFromSource {
+          inherit mkShader;
+        };
       in {
         reshade = pkgs.callPackage ./packages/reshade {};
         reshade-full = self.packages.${system}.reshade.override {withAddons = true;};
-        reshade-shaders = pkgs.callPackage ./packages/reshade-shaders {inherit mkShader;};
+        reshade-shaders = pkgs.callPackage ./packages/reshade-shaders {inherit (self.packages.${system}) reshadeShaders;};
         reshade-shaders-full = self.packages.${system}.reshade-shaders.override {full = true;};
+        reshadeShaders = import ./packages/reshade-shaders/shaders.nix {
+          inherit mkShaderFromSource lib;
+          sourceFile = ./sources.json;
+        };
         d3dcompiler_47-dll = pkgs.callPackage ./packages/d3dcompiler_47.dll {};
         ipsuShaders = pkgs.callPackage ./packages/ipsuShaders {inherit mkShader;};
         test = self.packages.${system}.reshade-shaders.override {

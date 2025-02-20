@@ -1,11 +1,14 @@
 {
   lib,
-  pkgs,
+  stdenvNoCC,
+  findutils,
+  gnused,
+  coreutils,
   ...
 }: let
-  inherit (lib.strings) concatMapStringsSep toLower;
-in {
-  mkShader = {
+  inherit (lib.strings) concatMapStringsSep toLower sanitizeDerivationName;
+in
+  {
     name,
     version,
     src,
@@ -13,12 +16,15 @@ in {
     texturePath,
     effects,
     deniedEffects ? [],
+    required ? false,
+    enabledByDefault ? false,
+    ...
   }:
-    pkgs.stdenvNoCC.mkDerivation (finalAttrs: {
-      inherit name;
+    stdenvNoCC.mkDerivation (finalAttrs: {
+      name = sanitizeDerivationName name;
       inherit version;
       inherit src;
-      buildInputs = with pkgs; [findutils gnused coreutils];
+      buildInputs = [findutils gnused coreutils];
       installPhase = let
         shaders = builtins.filter (f: ! (builtins.elem f deniedEffects)) effects;
         # Install the shader file ensure the path is lowercase to catch conflicts
@@ -77,6 +83,8 @@ in {
           echo 'WARN: No Presets'
         fi
       '';
-      passthru.installPhase = finalAttrs.installPhase;
-    });
-}
+      passthru = {
+        inherit (finalAttrs) installPhase;
+        inherit required enabledByDefault;
+      };
+    })
