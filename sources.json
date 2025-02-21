@@ -284,9 +284,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Fubax",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "f5e213eed6658881c2cb6356242af255dbdbbc92",
+      "commit": "263d364451d350db19a31ea77d050a6b320efbe7",
       "branch": "master",
-      "hash": "sha256-kSYgaaOL9LrfTdwx+3kHlMk3BOYKFe76h+BPQi0C1Oc=",
+      "hash": "sha256-Z09Z6Ttx1xEoGhSDbP443qX2PdLXjtTHX5lMhlpeAAs=",
       "enabledByDefault": false,
       "required": false
     },
