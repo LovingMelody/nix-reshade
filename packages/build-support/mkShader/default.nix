@@ -18,6 +18,8 @@ in
     deniedEffects ? [],
     required ? false,
     enabledByDefault ? false,
+    description ? "",
+    homepage ? "",
     ...
   }:
     stdenvNoCC.mkDerivation (finalAttrs: {
@@ -86,5 +88,8 @@ in
       passthru = {
         inherit (finalAttrs) installPhase;
         inherit required enabledByDefault;
+      };
+      meta = {
+        inherit description homepage;
       };
     })

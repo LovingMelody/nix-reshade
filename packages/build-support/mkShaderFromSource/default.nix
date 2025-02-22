@@ -15,7 +15,8 @@ in
         inherit (source) repo owner hash;
         rev = source.commit;
       };
-      inherit (source) deniedEffects effects;
+      inherit (source) deniedEffects effects description;
+      homepage = source.url;
       shaderPath = removePrefix "./" source.installPath;
       texturePath = removePrefix "./" source.texturePath;
       required = source.required or false;
