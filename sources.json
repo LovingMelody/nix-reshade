@@ -1,8 +1,8 @@
 {
   "reshade": {
-    "version": "6.4.0",
-    "base": "sha256-jvUZhhIJcrcQGgo8tohM3Fz7dEMklFGoHPrzNunB/T8=",
-    "addon": "sha256-uvKvh25G0DIWJ6L3g0fZcADJkl4yfhQbRpxJmINjYrM="
+    "version": "6.4.1",
+    "base": "sha256-C5dLgmO0qWJ2uD6Gc2cpGX6qlnynswFLbbw0LyW+Ie8=",
+    "addon": "sha256-EwgArWLul0P4XyRUKnuX/SmywY1Cf1rTVAzd/rbObmI="
   },
   "shaders": {
     "Standard effects": {
@@ -344,9 +344,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/DH",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "1a27aac25100c4b795b9ff14d20f544d9c58c241",
+      "commit": "2a1c590e0cbe8942457a978a6951af3a4564bd48",
       "branch": "master",
-      "hash": "sha256-lStyODAJYxrEeAr9yiwac+jXbjm7D6Z3uqLy49YmIRk=",
+      "hash": "sha256-v1c74NrDbAht5Ku4BGZFqRsUYzt4ENeIj5RBgTw1l8U=",
       "enabledByDefault": false,
       "required": false
     },
@@ -811,9 +811,9 @@
       "effects": ["vort_HDR.fx", "vort_Motion.fx"],
       "installPath": "./reshade-shaders/Shaders/vort_Shaders",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "a4ba9f4d62e0bc3487202866407ae2a24ae90c1f",
+      "commit": "40db2036d9dc411d442c32f984c60bb2558b8f68",
       "branch": "main",
-      "hash": "sha256-9GVCPa0kvSC7akHY6D34H/r2diiOUCYNw3hYQgnA/Tw=",
+      "hash": "sha256-F+dpzZHEUw9l+/srKpgOs0u35wkJu5kU+4ODfqImKnY=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1169,9 +1169,9 @@
       "effects": ["UjelDMargSaturation.fx", "UjelQuoteUnqoteHDRPack.fx"],
       "installPath": "./reshade-shaders/Shaders/UjelFX",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "eda50327cc70c7c03016c0e189dbd797e057699b",
+      "commit": "54f86f9380c8956a3001e2c82689625dd7a11931",
       "branch": "main",
-      "hash": "sha256-crjjnwfJ4aT8MbgdfJ33mEtyfIAFdbBisYqK/7QYGc4=",
+      "hash": "sha256-5gAKt5qQKe0rTf54xy9AYwFkaioQ0ptXvXS6Xv/tXO8=",
       "enabledByDefault": false,
       "required": false
     },
