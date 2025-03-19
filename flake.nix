@@ -119,7 +119,7 @@
       default = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "update-script" ''
-          PATH=${lib.makeBinPath [pkgs.nix-prefetch-git pkgs.nix-prefetch]}:$PATH
+          PATH=${lib.makeBinPath [pkgs.nix-prefetch-git pkgs.nix-prefetch pkgs.deno]}:$PATH
           git_root=$(${lib.getExe pkgs.git} rev-parse --show-toplevel)
           MANIFEST_PATH="$git_root/sources.json"
           EXTRA_SOURCES=${./extraSources.ini}
