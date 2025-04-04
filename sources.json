@@ -97,14 +97,13 @@
         "LightDoF.fx",
         "MagicBloom.fx",
         "NightVision.fx",
-        "ReflectiveBumpMapping.fx",
-        "SurfaceBlur.fx"
+        "ReflectiveBumpMapping.fx"
       ],
       "installPath": "./reshade-shaders/Shaders",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "9d910cd3b560ffeaeec88bc2dd011c2678606a2a",
+      "commit": "bcb5ba54199f4455026dd8ba66dc1b74461d3152",
       "branch": "legacy",
-      "hash": "sha256-LtKEkvcVT0usFMVzvtu++FJM9XfLlNQa5300+gnw7w4=",
+      "hash": "sha256-R8H127h/xiIgAogh6KjOA3Yg3A0dp6s6EjVnlnN1rRQ=",
       "enabledByDefault": false,
       "required": false
     },
@@ -314,7 +313,7 @@
         "qUINT_ssr.fx"
       ],
       "installPath": "./reshade-shaders/Shaders/qUINT",
-      "texturePath": "./reshade-shaders/Textures/qUINT",
+      "texturePath": "./reshade-shaders/Textures",
       "commit": "98fed77b26669202027f575a6d8f590426c21ebd",
       "branch": "master",
       "hash": "sha256-nPraJgxDm1N9FIhrv0msI3B3it8uyzk6YoX25WY27gE=",
@@ -369,7 +368,7 @@
         "ZigZag.fx"
       ],
       "installPath": "./reshade-shaders/Shaders/Warp-FX",
-      "texturePath": "./reshade-shaders/Textures/Warp-FX",
+      "texturePath": "./reshade-shaders/Textures",
       "commit": "6781e9b183d46e0ed78d207b1c599c028902dd5e",
       "branch": "master",
       "hash": "sha256-Zm6U720VQ3FvrRn70XBLdvNLRWrWW88/ZIoBmqeDDmw=",
@@ -541,7 +540,7 @@
       "deniedEffects": [],
       "effects": ["crt-royale.fx"],
       "installPath": "./reshade-shaders/Shaders/CRT-Royale",
-      "texturePath": "./reshade-shaders/Textures/CRT-Royale",
+      "texturePath": "./reshade-shaders/Textures",
       "commit": "7ca7f7cbb7e7d016ca1756d0855879c3b7d0cc05",
       "branch": "master",
       "hash": "sha256-6pjAWXRbT9TSqpTg8bKWua/RJ4PAXKA9+dkPEpVuEoE=",
@@ -673,7 +672,7 @@
         "FGFXLargeScalePerceptualObscuranceIrradiance.fx"
       ],
       "installPath": "./reshade-shaders/Shaders/FGFX",
-      "texturePath": "./reshade-shaders/Textures/FGFX",
+      "texturePath": "./reshade-shaders/Textures",
       "commit": "dc5c60e6a2928983277fde979d255dea5b92bb84",
       "branch": "main",
       "hash": "sha256-FS4q7NNgnrcovlNTX3c4kYMlsIRhLOmfRWkdH7ayoDk=",
@@ -719,10 +718,10 @@
         "kMirror.fx"
       ],
       "installPath": "./reshade-shaders/Shaders/CShade",
-      "texturePath": "./reshade-shaders/Textures/CShade",
-      "commit": "2032b9436d49afd69b63c62b2e3bebf92b0c4f3b",
+      "texturePath": "./reshade-shaders/Textures",
+      "commit": "9aa537a619a120fc62b7b10828df5a7a31034526",
       "branch": "main",
-      "hash": "sha256-L5cD0ahRASw8ec49W0Z9Q2lHgBvP/dmv/5QVI7+haiU=",
+      "hash": "sha256-3O6V2TLwCfkwS8inVrsKN4UNlg3OGN6YU9maESRK0SA=",
       "enabledByDefault": false,
       "required": false
     },
@@ -784,9 +783,9 @@
       "effects": ["vort_Static.fx", "vort_Motion.fx"],
       "installPath": "./reshade-shaders/Shaders/vort_Shaders",
       "texturePath": "./reshade-shaders/Textures/vort_Shaders",
-      "commit": "6c10ad533ef526dae701aed0864cfb5262badb05",
+      "commit": "7c91ae80aeb15e96cd70986dd653a59bccb56a20",
       "branch": "main",
-      "hash": "sha256-7o0nWC6o7nS6UVh4cO4RSZfSBIsOgcbGn1aXlu5RyrM=",
+      "hash": "sha256-gFLer5HRKIclckEdreZVm37seqPbRLJDW788WmcZcHg=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1109,9 +1108,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Barbatos",
       "texturePath": "./reshade-shaders/Textures/Barbatos",
-      "commit": "8c6c8a937c96c2eaa26a642c0bdea21fc47bdbb7",
+      "commit": "ccd0690b004d92d71230622294ea45d3308b5fa1",
       "branch": "main",
-      "hash": "sha256-zfbHjsgqFDK69dPBHbMe9DHhg8BrpruPASTcl+I84JQ=",
+      "hash": "sha256-jsl2j3XCz8m6QbuRD6b6tIu1jsxeXq+GCKN8srsNtMo=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1157,9 +1156,9 @@
       "effects": [],
       "installPath": "./reshade-shaders/Shaders",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "0c9933abf33984fcc7dee573388d0b5465d94d63",
+      "commit": "a777fc55337c3c64a444330f1739022e08ce1ae2",
       "branch": "master",
-      "hash": "sha256-UOIKgv/BxqB1tPzGuHUv8q5dtprHP854Ffu51hmSbHA=",
+      "hash": "sha256-xb0mRu4gAW98XUR5MfKEOLoV4k0RN7+hZj5q87oTVR8=",
       "enabledByDefault": false,
       "required": false
     }
