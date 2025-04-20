@@ -138,6 +138,8 @@ def reshade_manifest() -> dict[str, str]:
                 "nix",
                 "hash",
                 "to-sri",
+                "--type",
+                "sha256",
                 get_hash.stdout.strip(),
             ],
             capture_output=True,
