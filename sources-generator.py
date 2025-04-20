@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Creates a shaders list 
+Creates a shaders list
 """
 import configparser
 import json
@@ -137,11 +137,7 @@ def reshade_manifest() -> dict[str, str]:
             [
                 "nix",
                 "hash",
-                "convert",
-                "--hash-algo",
-                "sha256",
-                "--to",
-                "sri",
+                "to-sri",
                 get_hash.stdout.strip(),
             ],
             capture_output=True,
