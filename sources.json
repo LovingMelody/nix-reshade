@@ -145,9 +145,9 @@
       "effects": ["SuperDepth3D.fx"],
       "installPath": "./reshade-shaders/Shaders/Depth3D",
       "texturePath": "./reshade-shaders/Textures/Depth3D",
-      "commit": "67eedccd6fd3493c32bcc82a257823afb4d93439",
+      "commit": "86233822291a731a23c854231ab904097b722c57",
       "branch": "master",
-      "hash": "sha256-18L5gklSjuMVrypHGOS6BBDc4pw71C7xIvKUDLetbxM=",
+      "hash": "sha256-6ppAwy7m5pYbhWZq9afdxzi3OTZ9f2u6AliYD3xKKYo=",
       "enabledByDefault": false,
       "required": false
     },
@@ -783,9 +783,9 @@
       "effects": ["vort_Static.fx", "vort_Motion.fx"],
       "installPath": "./reshade-shaders/Shaders/vort_Shaders",
       "texturePath": "./reshade-shaders/Textures/vort_Shaders",
-      "commit": "d416dceb75b4033fcc35b9020159d20e13826a9b",
+      "commit": "da0935021a0d129a588ee92651a9cd8f4ff46e5a",
       "branch": "main",
-      "hash": "sha256-e2bMxD/PEZcSx7DWIQknMMg7HfxRYlort1XNkGwiHCg=",
+      "hash": "sha256-q3PNC1nX0vvF/Azwoo/BZ4gQOLIMVHrmvKFCNgi8ZL4=",
       "enabledByDefault": false,
       "required": false
     },
@@ -986,9 +986,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/GShade-Shaders",
       "texturePath": "./reshade-shaders/Textures/GShade-Shaders",
-      "commit": "286f86fc4bf81a29a537c2d1b497520c68232c1f",
+      "commit": "4f0b81f6035eba9e44e8a60cc049f1ff1f34ed06",
       "branch": "master",
-      "hash": "sha256-uwlxGBJyrI7RZ6G7WXwEj2b9ftYV4rCpzd35HSMkf5Q=",
+      "hash": "sha256-FZK/6cdV+wLccF9xU6UhyGp71hpd4lvhqsKO/4BGaA0=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1108,9 +1108,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Barbatos",
       "texturePath": "./reshade-shaders/Textures/Barbatos",
-      "commit": "776c40f9cd43766c594aebb32f5ed167460ae1c0",
+      "commit": "3a4f7ddc79cbf6f6ed7e35128425d36612f432ff",
       "branch": "main",
-      "hash": "sha256-SjO3klrgAJbjmu4T2fbA/XcaUpoNAaetrD9K5z8scfw=",
+      "hash": "sha256-o6ZkovrQ0Iyvaw04mCWDXqVOw5f9cCJLGEUKCjUe9Z4=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1146,6 +1146,22 @@
       "enabledByDefault": false,
       "required": false
     },
+    "Rendepth by cybereality": {
+      "name": "Rendepth by cybereality",
+      "description": "Stereoscopic 2D-to-3D Conversion",
+      "url": "https://github.com/outmode/rendepth-reshade",
+      "owner": "outmode",
+      "repo": "rendepth-reshade",
+      "deniedEffects": [],
+      "effects": ["Rendepth.fx"],
+      "installPath": "./reshade-shaders/Shaders/Rendepth",
+      "texturePath": "./reshade-shaders/Textures/Rendepth",
+      "commit": "47e238ae95d5e5eb865031af2e4bf60584bfc4f6",
+      "branch": "main",
+      "hash": "sha256-N+SHejJtRivYE78MxbdMwNRkUqPPgJakSxVvz2edliY=",
+      "enabledByDefault": false,
+      "required": false
+    },
     "ipsuShade by ipsusu": {
       "name": "ipsuShade by ipsusu",
       "description": "ipsusu ReShade / GShade, Gameplay and Screenshot presets for Final Fantasy XIV.",
@@ -1156,9 +1172,9 @@
       "effects": [],
       "installPath": "./reshade-shaders/Shaders",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "a777fc55337c3c64a444330f1739022e08ce1ae2",
+      "commit": "0b87907ac72f4c74ae44d2fe0b9f51fd72043111",
       "branch": "master",
-      "hash": "sha256-xb0mRu4gAW98XUR5MfKEOLoV4k0RN7+hZj5q87oTVR8=",
+      "hash": "sha256-Am375K93J8gBGngkEMhM39+oLdJCdsfDUKQCVE/gAmg=",
       "enabledByDefault": false,
       "required": false
     }
