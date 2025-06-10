@@ -1,16 +1,23 @@
 {
   description = "Package ReShade & Shaders for nix";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+  };
   outputs = {
     self,
     nixpkgs,
     ...
-  }: let
-    forAllSystems = function: builtins.mapAttrs function nixpkgs.legacyPackages;
+  } @ inputs: let
+    systems = lib.attrNames nixpkgs.legacyPackages;
+    forAllSystems2 = f: lib.genAttrs systems (system: f nixpkgs.legacyPackages.${system});
+    treefmtEval = forAllSystems2 (pkgs: inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
     inherit (nixpkgs) lib;
   in {
-    packages = forAllSystems (
-      system: pkgs: let
+    packages = forAllSystems2 (
+      pkgs: let
+        inherit (pkgs) system;
         mkShader = pkgs.callPackage ./packages/build-support/mkShader {};
         mkShaderFromSource = pkgs.callPackage ./packages/build-support/mkShaderFromSource {
           inherit mkShader;
@@ -42,84 +49,14 @@
         };
       }
     );
-    formatter = let
-      config = pkgs: (pkgs.writeText "treefmt-config.toml"
-        ''
-          [formatter.alejandra]
-          command = "${lib.getExe pkgs.alejandra}"
-          excludes = []
-          includes = ["*.nix"]
-          options = []
-
-
-          [formatter.black]
-          command = "${lib.getExe pkgs.python3Packages.black}"
-          excludes = []
-          includes = ["*.py", "*.pyi"]
-          options = []
-
-          [formatter.deadnix]
-          command = "${lib.getExe pkgs.deadnix}"
-          excludes = []
-          includes = ["*.nix"]
-          options = ["--edit", "--no-lambda-pattern-names"]
-
-          [formatter.deno]
-          command = "/nix/store/k9rjv96rpcb44w8wfjdyfis509qsmf7m-deno-2.1.10/bin/deno"
-          excludes = []
-          includes = [
-              "*.css",
-              "*.html",
-              "*.js",
-              "*.json",
-              "*.jsonc",
-              "*.jsx",
-              "*.less",
-              "*.markdown",
-              "*.md",
-              "*.sass",
-              "*.scss",
-              "*.ts",
-              "*.tsx",
-              "*.yaml",
-              "*.yml",
-          ]
-          options = ["fmt"]
-
-          [formatter.isort]
-          command = "${lib.getExe pkgs.python3Packages.isort}"
-          excludes = []
-          includes = ["*.py", "*.pyi"]
-          options = []
-
-          [global]
-          excludes = [
-              "*.lock",
-              "*.patch",
-              "package-lock.json",
-              "go.mod",
-              "go.sum",
-              ".gitignore",
-              ".gitmodules",
-              ".hgignore",
-              ".svnignore",
-          ]
-          on-unmatched = "warn"
-        '');
-    in
-      forAllSystems (_system: pkgs:
-        pkgs.writeShellScriptBin "formatter" ''
-          unset PRJ_ROOT
-          ${lib.getExe pkgs.treefmt} \
-             --config-file ${(config pkgs)} \
-             --tree-root-file=flake.nix \
-             "$@"
-        '');
-    apps = forAllSystems (system: pkgs: {
+    formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
+    apps = forAllSystems2 (pkgs: let
+      inherit (pkgs) system;
+    in {
       default = {
         type = "app";
         program = lib.getExe (pkgs.writeShellScriptBin "update-script" ''
-          PATH=${lib.makeBinPath [pkgs.nix-prefetch-git pkgs.nix-prefetch]}:$PATH
+          PATH=${lib.makeBinPath [pkgs.nix-prefetch-git pkgs.nix-prefetch pkgs.nix pkgs.deno]}:$PATH
           git_root=$(${lib.getExe pkgs.git} rev-parse --show-toplevel)
           MANIFEST_PATH="$git_root/sources.json"
           EXTRA_SOURCES=${./extraSources.ini}
