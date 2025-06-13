@@ -145,9 +145,9 @@
       "effects": ["SuperDepth3D.fx"],
       "installPath": "./reshade-shaders/Shaders/Depth3D",
       "texturePath": "./reshade-shaders/Textures/Depth3D",
-      "commit": "5938efcf8d7f4f5e3e0a8dae9262dbc9d4520e3d",
+      "commit": "603287c841039ad67397825e4c391d688dab2c40",
       "branch": "master",
-      "hash": "sha256-NfbVH+QlN+jN7LFr+syU2KkuwCRvjqBiTYO578kqVR8=",
+      "hash": "sha256-pOLzDvE/U7mXoCpuha1y/UqLym7WczYESPYl3rSZQdo=",
       "enabledByDefault": false,
       "required": false
     },
