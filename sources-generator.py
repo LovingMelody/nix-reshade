@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Creates a shaders list 
+Creates a shaders list
 """
 import configparser
 import json
