@@ -51,7 +51,7 @@
     );
     formatter = builtins.mapAttrs (_n: v: v.config.build.wrapper) treefmtEval;
     apps = forAllSystems2 (pkgs: let
-      inherit (pkgs) system;
+      inherit (pkgs.stdenv.hostPlatform) system;
     in {
       default = {
         type = "app";
