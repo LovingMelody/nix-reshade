@@ -1,8 +1,8 @@
 {
   "reshade": {
-    "version": "6.7.1",
-    "base": "sha256-TXwZpcCISeOoPCgkz5NjY0mkpgXACYEq22gnINmE+k0=",
-    "addon": "sha256-/FXFxi0LxDvwLEDsmu9p4LdPIqYBdAOvGJfsMuXNDo8="
+    "version": "6.7.3",
+    "base": "sha256-Vnkf0GU1jomcWB6+/irYcTmbfHroP7heEVTAinWkQUc=",
+    "addon": "sha256-x422m9En6YBUvUlvtCJlX0ocxmTij40Szpg1smR7xXE="
   },
   "shaders": {
     "Standard effects": {
@@ -146,9 +146,9 @@
       "effects": ["SuperDepth3D.fx"],
       "installPath": "./reshade-shaders/Shaders/Depth3D",
       "texturePath": "./reshade-shaders/Textures/Depth3D",
-      "commit": "4b19e9cf5b7bc7f11265296dc37fa4cf7b386ee6",
+      "commit": "abafd5ce52e71de2fea7fd08629cb36a7e76c25b",
       "branch": "master",
-      "hash": "sha256-CKSM8HUu3pQfdTwCiGcPQOynVNSOitr2IEcbQsrxSnc=",
+      "hash": "sha256-/O6/rfN9M92UNokfC3MfA8c5xJb9kDz9T1xkOZ2lAdc=",
       "enabledByDefault": false,
       "required": false
     },
@@ -721,9 +721,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/CShade",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "085bf1edd2309df41b9746b55003831c2bbb89ed",
+      "commit": "40d1105e7ae96ecba7860b1672ef91296489c5fe",
       "branch": "main",
-      "hash": "sha256-73a16Y1kg/+Y4kr8u/cBAcOOXjrW6ccc96aIh2S4THA=",
+      "hash": "sha256-OxPN6pouGtV63+qt3aHwyxX4bOl8WeDN4o7u9MqTRq0=",
       "enabledByDefault": false,
       "required": false
     },
@@ -769,9 +769,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/iMMERSE",
       "texturePath": "./reshade-shaders/Textures/iMMERSE",
-      "commit": "8fa641ef7af561a52cfc15f43155abd54b095b1f",
+      "commit": "36252cb78645371e8caf22cb7db2d179ce50c603",
       "branch": "main",
-      "hash": "sha256-U2jCXL+nDKrFdjby/oQ0T0hw0tL6+SJPzSu9IAaXibA=",
+      "hash": "sha256-P/MR2M4NeRg3qfvxFwzkAjKyQQ1knHHnFshZaog79QI=",
       "enabledByDefault": false,
       "required": false
     },
@@ -846,9 +846,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/METEOR",
       "texturePath": "./reshade-shaders/Textures/METEOR",
-      "commit": "228e4aa521b34bdf3ad798220a1e59cc4a2a6a95",
+      "commit": "ef8c9fc45d37f5dc5c514aeaff30cd5dfade5c73",
       "branch": "main",
-      "hash": "sha256-iQ8BYWRNCbQuJ9CRSelF+idcKlCtW+172ZrUUAI8F20=",
+      "hash": "sha256-sKl9JgDJjg73pTjkEyQsV5tsKw7d7pf6P7q7SHI7UEI=",
       "enabledByDefault": false,
       "required": false
     },
@@ -912,9 +912,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/ZenteonFX",
       "texturePath": "./reshade-shaders/Textures/ZenteonFX",
-      "commit": "b0a627a1c53ff954aebe8a9c2002435e9425df07",
+      "commit": "f8b3e71c4b864311b16113024e16037ddece4208",
       "branch": "main",
-      "hash": "sha256-/Q8aDKA2WHLfgoih996sqheZ/3x6/13vdP4vA9/1wVo=",
+      "hash": "sha256-Ihubp6msh1x2t/mq+nJUYUIjPjVbAYQhMhHb4TOflzY=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1098,9 +1098,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Barbatos",
       "texturePath": "./reshade-shaders/Textures/Barbatos",
-      "commit": "25f93d4ea3350ce3454abcb913ee353bd1387895",
+      "commit": "3bad8213860cf2ae75566a34298c05657c2524cc",
       "branch": "main",
-      "hash": "sha256-SDg2aQso54S67+bNX4yd5AQXO/r9HZ9sru0v0sc6tp0=",
+      "hash": "sha256-+ZZeqMksA2h5wMYDpyVYWVT5W84PWJE7/pizehjwY/g=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1130,9 +1130,9 @@
       "effects": ["SCAO_V2.fx", "SCGI.fx"],
       "installPath": "./reshade-shaders/Shaders/BFBFX",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "d85423cc01e257e462c3be82ee2429b4844c68ef",
+      "commit": "b4fe2fd0426506672ab904a039d18d5df2b761e0",
       "branch": "main",
-      "hash": "sha256-Hp2ht/nz+nnDxMmX1/HP6lV0O95c7q2A09obPcHPHdA=",
+      "hash": "sha256-YNHgwygbgUPtTKKpGfgtD0gYfwbqDyZMMvZBRSbqLH4=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1175,12 +1175,18 @@
       "owner": "umar-afzaal",
       "repo": "LumeniteFX",
       "deniedEffects": [],
-      "effects": ["Kernel.fx", "LumaFlow.fx", "RTAO.fx", "LSAO.fx", "SSR.fx"],
+      "effects": [
+        "lumenite_Kernel.fx",
+        "lumenite_AnamorphicBloom.fx",
+        "lumenite_RTAO.fx",
+        "lumenite_LSAO.fx",
+        "lumenite_SSR.fx"
+      ],
       "installPath": "./reshade-shaders/Shaders/LumeniteFX",
       "texturePath": "./reshade-shaders/Textures/LumeniteFX",
-      "commit": "d7bd18a6834a7934ec47c607979a276a64e009f5",
+      "commit": "52ca1ad8d21cb2cdc03dbd266a12f1d6c148298b",
       "branch": "mainline",
-      "hash": "sha256-QaKLZG/khixUPmBYhFOk1SFcQXzVk/Lx8NtSxXjA0OQ=",
+      "hash": "sha256-6H7llr+4O1sN/tzT3vNKkcJY+VwFuE7masrFRSUrUFw=",
       "enabledByDefault": false,
       "required": false
     },
