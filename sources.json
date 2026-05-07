@@ -146,9 +146,9 @@
       "effects": ["SuperDepth3D.fx"],
       "installPath": "./reshade-shaders/Shaders/Depth3D",
       "texturePath": "./reshade-shaders/Textures/Depth3D",
-      "commit": "5faa2ead6dc82183ae9f02a583ab6038838431bd",
+      "commit": "c5699144d07e80ff8f531618f23e5cae488c91aa",
       "branch": "master",
-      "hash": "sha256-9A3NAdYrAcFP14UHlbCJqAmNduMFEkWQeGDI5wvuZn0=",
+      "hash": "sha256-Uf259imY8iSo4mSXJ6Y72blpEXJjEVE9/BdbTLwsESI=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1098,9 +1098,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/Barbatos",
       "texturePath": "./reshade-shaders/Textures/Barbatos",
-      "commit": "beb0bed918434b8874a14d9adfed394ce3bd72e0",
+      "commit": "05c765358124448fae12ec85a0670f1a76968a2e",
       "branch": "main",
-      "hash": "sha256-pUx4jS+sldAP9uGeR4EutBDknzH8Kk4pNzmKjYjcS4g=",
+      "hash": "sha256-MxGRtbTJHP+W/vuTOo07YcxbPgpzuSePbtAdJzsqqEw=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1184,9 +1184,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/LumeniteFX",
       "texturePath": "./reshade-shaders/Textures/LumeniteFX",
-      "commit": "22d99d8eab14c78ea7f4c2cab7dda832d410ceeb",
+      "commit": "e310871f77fff360cc5226790a45ef36bc2b5417",
       "branch": "mainline",
-      "hash": "sha256-kb6oont9zW2XHpjYL3PHPViOi+6ybUigo+NcUfWc/+4=",
+      "hash": "sha256-pJQ/QGRsRmFnBq867gYAWy0HNEL7CVMq3onGKuW5ZUY=",
       "enabledByDefault": false,
       "required": false
     },
@@ -1200,9 +1200,9 @@
       "effects": [],
       "installPath": "./reshade-shaders/Shaders",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "75763a50f382315c140cc1910c528e67d88a8116",
+      "commit": "e14388f190e1dc5de460ae11e7f0e9b780c8f308",
       "branch": "master",
-      "hash": "sha256-g9y9LED/n4ft8JBXwteIM+yKRatUFoNVcOIvyXBHtoI=",
+      "hash": "sha256-WWCl7yaUz33zFD8e7F2XIDUV6mLplYcdlWFRiBxIxE0=",
       "enabledByDefault": false,
       "required": false
     }
