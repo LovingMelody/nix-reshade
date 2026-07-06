@@ -721,9 +721,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/CShade",
       "texturePath": "./reshade-shaders/Textures",
-      "commit": "4d14fa1e99c5881578fb73473e2cae46826afd96",
+      "commit": "8a01468e2c4688c4f3c726fed7e07274f08ef363",
       "branch": "main",
-      "hash": "sha256-dFr3RN8xoBt7DbXzJt1zzH8KZHDLxhZu9U3EXQK//NM=",
+      "hash": "sha256-BoC+/6s3HY2Z1hhq45RiRYvg2Qb7EwNDOh8uenKHS9w=",
       "enabledByDefault": false,
       "required": false
     },
@@ -913,9 +913,9 @@
       ],
       "installPath": "./reshade-shaders/Shaders/ZenteonFX",
       "texturePath": "./reshade-shaders/Textures/ZenteonFX",
-      "commit": "37ed4e559ceb2baa0ed0d487ae3b15b2c78ff342",
+      "commit": "9fe75bdbaddc84ea5aab5d58fee83a2b9659f771",
       "branch": "main",
-      "hash": "sha256-j14GoHgZJ21G7jartgDA45JoyD9C55zmsIUVHLicE7Q=",
+      "hash": "sha256-rxrfR3obAhoNEkX3kjRjiEGsoXzazizEclXSnZGXNk0=",
       "enabledByDefault": false,
       "required": false
     },
