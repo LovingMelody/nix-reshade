@@ -3,6 +3,7 @@
 """
 Creates a shaders list
 """
+
 import configparser
 import json
 import os
