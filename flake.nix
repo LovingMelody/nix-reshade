@@ -17,7 +17,7 @@
   in {
     packages = forAllSystems2 (
       pkgs: let
-        inherit (pkgs) system;
+        inherit (pkgs.stdenv.hostPlatform) system;
         mkShader = pkgs.callPackage ./packages/build-support/mkShader {};
         mkShaderFromSource = pkgs.callPackage ./packages/build-support/mkShaderFromSource {
           inherit mkShader;
